@@ -1,14 +1,14 @@
 package goleveldb
 
 type LevelDBConfig struct {
-	Compression            bool
-	BlockSize              int
-	WriteBufferSize        int
-	CacheSize              int
-	MaxOpenFiles           int
-	CompactionTableSize    int
-	WriteL0SlowdownTrigger int
-	WriteL0PauseTrigger    int
+	Compression            bool `mapstructure:"compression"`
+	BlockSize              int  `mapstructure:"blockSize"`
+	WriteBufferSize        int  `mapstructure:"writeBufferSize"`
+	CacheSize              int  `mapstructure:"cacheSize"`
+	MaxOpenFiles           int  `mapstructure:"maxOpenFiles"`
+	CompactionTableSize    int  `mapstructure:"compactionTableSize"`
+	WriteL0SlowdownTrigger int  `mapstructure:"writeL0SlowdownTrigger"`
+	WriteL0PauseTrigger    int  `mapstructure:"writeL0PauseTrigger"`
 }
 
 func DefaultLevelDBConfig() *LevelDBConfig {
