@@ -21,7 +21,7 @@ func New(storeType StoreType, opts ...Option) (s *Store) {
 	return
 }
 
-func (s *Store) String() string {
+func (s *Store) Name() string {
 	switch s.storeType {
 	case StoreTypeDB:
 		return DBName
