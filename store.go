@@ -24,11 +24,11 @@ func New(storeType StoreType, opts ...Option) (s *Store) {
 func (s *Store) Name() string {
 	switch s.storeType {
 	case StoreTypeDB:
-		return DBName
+		return DBName + "." + s.opts.config.Tag
 	case StoreTypeMemory:
-		return MemDBName
+		return MemDBName + "." + s.opts.config.Tag
 	default:
-		return DBName
+		return DBName + "." + s.opts.config.Tag
 	}
 }
 
