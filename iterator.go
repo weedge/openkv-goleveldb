@@ -47,3 +47,7 @@ func (it *Iterator) Last() {
 func (it *Iterator) Seek(key []byte) {
 	it.it.Seek(key)
 }
+
+func (it *Iterator) Error() error {
+	return it.it.Error()
+}
